@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		377C2741B78F730C6D63B85E /* Pods_OpenJiroMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3C946D6E2174E51E2844CD /* Pods_OpenJiroMapTests.framework */; };
 		3ACCC0BF1FC67EB900300A7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACCC0BE1FC67EB900300A7E /* AppDelegate.swift */; };
 		3ACCC0C11FC67EB900300A7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACCC0C01FC67EB900300A7E /* ViewController.swift */; };
 		3ACCC0C41FC67EB900300A7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACCC0C21FC67EB900300A7E /* Main.storyboard */; };
 		3ACCC0C61FC67EB900300A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ACCC0C51FC67EB900300A7E /* Assets.xcassets */; };
 		3ACCC0C91FC67EB900300A7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACCC0C71FC67EB900300A7E /* LaunchScreen.storyboard */; };
 		3ACCC0D41FC67EBA00300A7E /* OpenJiroMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACCC0D31FC67EBA00300A7E /* OpenJiroMapTests.swift */; };
+		DBB05E659C3022E7A34C7DFB /* Pods_OpenJiroMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E77C294CD37E058B0C0081 /* Pods_OpenJiroMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,12 @@
 		3ACCC0CF1FC67EBA00300A7E /* OpenJiroMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenJiroMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACCC0D31FC67EBA00300A7E /* OpenJiroMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenJiroMapTests.swift; sourceTree = "<group>"; };
 		3ACCC0D51FC67EBA00300A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58E77C294CD37E058B0C0081 /* Pods_OpenJiroMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenJiroMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD487685698400F3E41CC45 /* Pods-OpenJiroMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenJiroMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenJiroMapTests/Pods-OpenJiroMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		7D3C946D6E2174E51E2844CD /* Pods_OpenJiroMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenJiroMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		981B2AE3AC6584B4D19F91F7 /* Pods-OpenJiroMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenJiroMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenJiroMapTests/Pods-OpenJiroMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D46B7CB357038F7A558A8636 /* Pods-OpenJiroMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenJiroMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenJiroMap/Pods-OpenJiroMap.debug.xcconfig"; sourceTree = "<group>"; };
+		FBF82507E4B62EA8220F6BB9 /* Pods-OpenJiroMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenJiroMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenJiroMap/Pods-OpenJiroMap.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB05E659C3022E7A34C7DFB /* Pods_OpenJiroMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377C2741B78F730C6D63B85E /* Pods_OpenJiroMapTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29256AA148A10AEF4E3CA8B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58E77C294CD37E058B0C0081 /* Pods_OpenJiroMap.framework */,
+				7D3C946D6E2174E51E2844CD /* Pods_OpenJiroMapTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3ACCC0B21FC67EB900300A7E = {
 			isa = PBXGroup;
 			children = (
 				3ACCC0BD1FC67EB900300A7E /* OpenJiroMap */,
 				3ACCC0D21FC67EBA00300A7E /* OpenJiroMapTests */,
 				3ACCC0BC1FC67EB900300A7E /* Products */,
+				A2A4FAF5A15665891D975701 /* Pods */,
+				29256AA148A10AEF4E3CA8B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +117,17 @@
 			path = OpenJiroMapTests;
 			sourceTree = "<group>";
 		};
+		A2A4FAF5A15665891D975701 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D46B7CB357038F7A558A8636 /* Pods-OpenJiroMap.debug.xcconfig */,
+				FBF82507E4B62EA8220F6BB9 /* Pods-OpenJiroMap.release.xcconfig */,
+				981B2AE3AC6584B4D19F91F7 /* Pods-OpenJiroMapTests.debug.xcconfig */,
+				7BD487685698400F3E41CC45 /* Pods-OpenJiroMapTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ACCC0D81FC67EBA00300A7E /* Build configuration list for PBXNativeTarget "OpenJiroMap" */;
 			buildPhases = (
+				78D2477D7A7BFC196C33C6C0 /* [CP] Check Pods Manifest.lock */,
 				3ACCC0B71FC67EB900300A7E /* Sources */,
 				3ACCC0B81FC67EB900300A7E /* Frameworks */,
 				3ACCC0B91FC67EB900300A7E /* Resources */,
+				7999E6B5996B21E6C613EBE8 /* [CP] Embed Pods Frameworks */,
+				B4CBB73053422B31A4E6A77E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3ACCC0DB1FC67EBA00300A7E /* Build configuration list for PBXNativeTarget "OpenJiroMapTests" */;
 			buildPhases = (
+				A2435106B14B945B8665D57F /* [CP] Check Pods Manifest.lock */,
 				3ACCC0CB1FC67EBA00300A7E /* Sources */,
 				3ACCC0CC1FC67EBA00300A7E /* Frameworks */,
 				3ACCC0CD1FC67EBA00300A7E /* Resources */,
+				B89578FF55647AFDDC06FBF3 /* [CP] Embed Pods Frameworks */,
+				72B71A52FF92114BF6D81DA0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +231,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72B71A52FF92114BF6D81DA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenJiroMapTests/Pods-OpenJiroMapTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78D2477D7A7BFC196C33C6C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenJiroMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7999E6B5996B21E6C613EBE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenJiroMap/Pods-OpenJiroMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2435106B14B945B8665D57F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenJiroMapTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4CBB73053422B31A4E6A77E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenJiroMap/Pods-OpenJiroMap-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenJiroMap/Pods-OpenJiroMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B89578FF55647AFDDC06FBF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenJiroMapTests/Pods-OpenJiroMapTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3ACCC0B71FC67EB900300A7E /* Sources */ = {
@@ -351,6 +491,7 @@
 		};
 		3ACCC0D91FC67EBA00300A7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46B7CB357038F7A558A8636 /* Pods-OpenJiroMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +507,7 @@
 		};
 		3ACCC0DA1FC67EBA00300A7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBF82507E4B62EA8220F6BB9 /* Pods-OpenJiroMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,6 +523,7 @@
 		};
 		3ACCC0DC1FC67EBA00300A7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 981B2AE3AC6584B4D19F91F7 /* Pods-OpenJiroMapTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -398,6 +541,7 @@
 		};
 		3ACCC0DD1FC67EBA00300A7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD487685698400F3E41CC45 /* Pods-OpenJiroMapTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
