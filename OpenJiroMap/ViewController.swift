@@ -41,9 +41,18 @@ class ViewController: UIViewController {
         let decoder = JSONDecoder()
         Alamofire.request(OpenJiroAPIEndpoint).responseDecodableObject(keyPath: nil, decoder: decoder) { (response: DataResponse<[JiroItem]>) in
             let jiroItems = response.result.value
-            print(jiroItems)
+            
+            guard let items = jiroItems else {
+                return
+            }
+            
+            items.map {
+                let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: CLLocationDegrees($0.latlng.latitude), longitude: CLLocationDegrees($0.latlng.longitude)))
+                marker.title = $0.name
+                marker.snippet = $0.open
+                marker.map = self.mapView
+            }
         }
-
     }
     
     func setupGoogleMap() {
