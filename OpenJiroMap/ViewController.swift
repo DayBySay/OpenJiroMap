@@ -9,8 +9,26 @@
 import UIKit
 import GoogleMaps
 import Alamofire
+import CodableAlamofire
 
 let OpenJiroAPIEndpoint = ""
+
+struct LatLng: Codable {
+    let latitude: Float
+    let longitude: Float
+}
+
+struct JiroItem: Codable {
+    let adress: String
+    let holiday: String
+    let id: Int
+    let name: String
+    let open: String
+    let type: Int
+    let urls: [String: String]
+    let latlng: LatLng
+    
+}
 
 class ViewController: UIViewController {
     var shouldUpdate = true
@@ -20,15 +38,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupGoogleMap()
         
-        Alamofire.request(OpenJiroAPIEndpoint).responseJSON { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-            }
+        let decoder = JSONDecoder()
+        Alamofire.request(OpenJiroAPIEndpoint).responseDecodableObject(keyPath: nil, decoder: decoder) { (response: DataResponse<[JiroItem]>) in
+            let jiroItems = response.result.value
+            print(jiroItems)
         }
+
     }
     
     func setupGoogleMap() {
