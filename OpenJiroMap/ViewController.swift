@@ -8,6 +8,9 @@
 
 import UIKit
 import GoogleMaps
+import Alamofire
+
+let OpenJiroAPIEndpoint = ""
 
 class ViewController: UIViewController {
     var shouldUpdate = true
@@ -16,6 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGoogleMap()
+        
+        Alamofire.request(OpenJiroAPIEndpoint).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
     }
     
     func setupGoogleMap() {
