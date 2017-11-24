@@ -6,6 +6,7 @@ target 'OpenJiroMap' do
   use_frameworks!
 
   pod 'GoogleMaps'
+  pod 'Alamofire'
 
   target 'OpenJiroMapTests' do
     inherit! :search_paths
