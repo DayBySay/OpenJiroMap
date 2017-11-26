@@ -45,11 +45,11 @@ class ViewController: UIViewController, GMSMapViewDelegate {
             guard let items = jiroItems else {
                 return
             }
-            
-            items.map {
-                let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: CLLocationDegrees($0.latlng.latitude), longitude: CLLocationDegrees($0.latlng.longitude)))
-                marker.title = $0.name
-                marker.snippet = $0.open
+
+            for item in items {
+                let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: CLLocationDegrees(item.latlng.latitude), longitude: CLLocationDegrees(item.latlng.longitude)))
+                marker.title = item.name
+                marker.snippet = item.open
                 marker.map = self.mapView
             }
         }
