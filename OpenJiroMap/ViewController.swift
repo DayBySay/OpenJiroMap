@@ -30,7 +30,7 @@ struct JiroItem: Codable {
     
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GMSMapViewDelegate {
     var shouldUpdate = true
     var mapView: GMSMapView!
 
@@ -61,6 +61,7 @@ class ViewController: UIViewController {
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         mapView.addObserver(self, forKeyPath: "myLocation", options: .new, context: nil)
+        mapView.delegate = self
         
         view.addSubview(mapView)
         
@@ -82,5 +83,11 @@ class ViewController: UIViewController {
     deinit {
         mapView.removeObserver(self, forKeyPath: "myLocation")
     }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        return false
+    }
+
 }
 
