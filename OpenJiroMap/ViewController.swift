@@ -32,8 +32,8 @@ struct JiroItem: Codable {
 
 class ViewController: UIViewController, GMSMapViewDelegate {
     var shouldUpdate = true
-    var mapView: GMSMapView!
-
+    @IBOutlet weak var mapView: GMSMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGoogleMap()
@@ -57,14 +57,12 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     
     func setupGoogleMap() {
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        mapView.camera = camera
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         mapView.addObserver(self, forKeyPath: "myLocation", options: .new, context: nil)
         mapView.delegate = self
-        
-        view.addSubview(mapView)
-        
+                
         DispatchQueue.main.async() {
             self.mapView.isMyLocationEnabled = true
         }
