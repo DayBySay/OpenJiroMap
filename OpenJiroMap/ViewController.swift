@@ -8,27 +8,7 @@
 
 import UIKit
 import GoogleMaps
-import Alamofire
 import CodableAlamofire
-
-let OpenJiroAPIEndpoint = ""
-
-struct LatLng: Codable {
-    let latitude: Float
-    let longitude: Float
-}
-
-struct JiroItem: Codable {
-    let adress: String
-    let holiday: String
-    let id: Int
-    let name: String
-    let open: String
-    let type: Int
-    let urls: [String: String]
-    let latlng: LatLng
-    
-}
 
 class ViewController: UIViewController, GMSMapViewDelegate {
     var shouldUpdate = true
@@ -38,14 +18,8 @@ class ViewController: UIViewController, GMSMapViewDelegate {
         super.viewDidLoad()
         setupGoogleMap()
         
-        let decoder = JSONDecoder()
-        Alamofire.request(OpenJiroAPIEndpoint).responseDecodableObject(keyPath: nil, decoder: decoder) { (response: DataResponse<[JiroItem]>) in
-            let jiroItems = response.result.value
-            
-            guard let items = jiroItems else {
-                return
-            }
-
+        let store = DataStore()
+        store.fetchItems { items in
             for item in items {
                 let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: CLLocationDegrees(item.latlng.latitude), longitude: CLLocationDegrees(item.latlng.longitude)))
                 marker.title = item.name
