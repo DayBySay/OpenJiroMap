@@ -28,16 +28,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="an6-jj-f05" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEF-et-6Pj" userLabel="FilteringView">
+                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry3-cn-Arn">
+                                        <rect key="frame" x="294" y="8" width="62" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ir7-NE-ji0"/>
+                                            <constraint firstAttribute="width" constant="62" id="JaP-JJ-7KL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="フィルタ"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR9-zW-4mo">
+                                        <rect key="frame" x="19" y="8" width="75" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="W5O-Yl-G0K"/>
+                                            <constraint firstAttribute="height" constant="30" id="bev-pC-vOZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="リストを表示"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lR9-zW-4mo" firstAttribute="leading" secondItem="yEF-et-6Pj" secondAttribute="leading" constant="19" id="Ux0-cD-csm"/>
+                                    <constraint firstItem="lR9-zW-4mo" firstAttribute="top" secondItem="yEF-et-6Pj" secondAttribute="top" constant="8" id="bRB-ou-UTd"/>
+                                    <constraint firstItem="ry3-cn-Arn" firstAttribute="top" secondItem="yEF-et-6Pj" secondAttribute="top" constant="8" id="eci-L8-VuH"/>
+                                    <constraint firstAttribute="trailing" secondItem="ry3-cn-Arn" secondAttribute="trailing" constant="19" id="fGX-aU-QrJ"/>
+                                    <constraint firstAttribute="height" constant="64" id="gTV-i7-Ck7"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="an6-jj-f05" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cri-tA-mdm"/>
+                            <constraint firstItem="yEF-et-6Pj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H63-5i-m9u"/>
+                            <constraint firstItem="yEF-et-6Pj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JBZ-EU-xae"/>
                             <constraint firstItem="an6-jj-f05" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NkR-tl-gAM"/>
+                            <constraint firstItem="yEF-et-6Pj" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="bAl-bb-nbR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="an6-jj-f05" secondAttribute="trailing" id="oY4-V1-69b"/>
-                            <constraint firstAttribute="bottom" secondItem="an6-jj-f05" secondAttribute="bottom" id="vzm-k9-GXM"/>
+                            <constraint firstItem="yEF-et-6Pj" firstAttribute="top" secondItem="an6-jj-f05" secondAttribute="bottom" id="vzm-k9-GXM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
