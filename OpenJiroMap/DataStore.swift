@@ -29,6 +29,14 @@ struct JiroItem: Codable {
     
 }
 
+enum JiroType: String {
+    case Chokkei = "直系"
+    case Aryu = "亜流"
+    case Inspire = "インスパイア"
+}
+
+let jiroTypes: [JiroType] = [.Chokkei, .Aryu, .Inspire]
+
 class DataStore {
     public func fetchItems(completion: @escaping ([JiroItem]) -> Void) {
         let decoder = JSONDecoder()
@@ -40,6 +48,24 @@ class DataStore {
             }
             
             completion(items)
+        }
+    }
+}
+
+class Filter {
+    static let shared = Filter()
+    
+    var types: [String] {
+        didSet {
+            UserDefaults.standard.set(types, forKey: "type")
+        }
+    }
+    
+    init() {
+        if let types = UserDefaults.standard.object(forKey: "type") {
+            self.types = types as! [String]
+        } else {
+            self.types = []
         }
     }
 }

@@ -8,6 +8,7 @@ target 'OpenJiroMap' do
   pod 'GoogleMaps'
   pod 'Alamofire'
   pod 'CodableAlamofire'
+  pod 'Eureka'
 
   target 'OpenJiroMapTests' do
     inherit! :search_paths
