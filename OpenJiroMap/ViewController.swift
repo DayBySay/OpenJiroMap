@@ -17,6 +17,10 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGoogleMap()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        mapView.clear()
         
         let store = DataStore()
         store.fetchItems { items in
@@ -57,7 +61,6 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        
         return false
     }
 

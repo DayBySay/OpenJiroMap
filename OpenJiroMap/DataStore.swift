@@ -29,14 +29,6 @@ struct JiroItem: Codable {
     
 }
 
-enum JiroType: String {
-    case Chokkei = "直系"
-    case Aryu = "亜流"
-    case Inspire = "インスパイア"
-}
-
-let jiroTypes: [JiroType] = [.Chokkei, .Aryu, .Inspire]
-
 class DataStore {
     public func fetchItems(completion: @escaping ([JiroItem]) -> Void) {
         let decoder = JSONDecoder()
@@ -47,7 +39,8 @@ class DataStore {
                 return
             }
             
-            completion(items)
+            let filterdItems = Filter.shared.exec(items: items)
+            completion(filterdItems)
         }
     }
 }
@@ -68,4 +61,26 @@ class Filter {
             self.types = []
         }
     }
+    
+    func exec(items: [JiroItem]) -> [JiroItem] {
+        let typeFiltered = items.filter { typeFilter(item: $0) }
+        return typeFiltered
+    }
+    
+    func typeFilter(item: JiroItem) -> Bool {
+        let typeInt = item.type
+        let typeFilterdItems = types.map { str -> Int in
+            return jiroTypes.index(of: JiroType(rawValue: str)!)!
+        }
+        
+        return typeFilterdItems.contains(typeInt)
+    }
 }
+
+enum JiroType: String {
+    case Chokkei = "直系"
+    case Inspire = "インスパイア"
+    case Aryu = "亜流"
+}
+
+let jiroTypes: [JiroType] = [.Chokkei, .Inspire, .Aryu]
