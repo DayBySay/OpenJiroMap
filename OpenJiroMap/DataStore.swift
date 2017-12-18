@@ -75,6 +75,13 @@ class Filter {
         
         return typeFilterdItems.contains(typeInt)
     }
+    
+    static func registerDefaults() {
+        let ud = UserDefaults.standard
+        ud.register(defaults: [
+            "type" : ["直系", "インスパイア", "亜流"],
+            ])
+    }
 }
 
 enum JiroType: String {
