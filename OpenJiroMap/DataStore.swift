@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 
-
 let OpenJiroAPIEndpoint = "https://openjiro-169415.firebaseapp.com/jiro.json"
 
 struct LatLng: Codable {
@@ -30,6 +29,9 @@ struct JiroItem: Codable {
 }
 
 class DataStore {
+    public static let shared = DataStore()
+    public var jiroItems: [JiroItem] = []
+    
     public func fetchItems(completion: @escaping ([JiroItem]) -> Void) {
         let decoder = JSONDecoder()
         Alamofire.request(OpenJiroAPIEndpoint).responseDecodableObject(keyPath: nil, decoder: decoder) { (response: DataResponse<[JiroItem]>) in
@@ -38,6 +40,8 @@ class DataStore {
             guard let items = jiroItems else {
                 return
             }
+            
+            self.jiroItems = items
             
             let filterdItems = Filter.shared.exec(items: items)
             completion(filterdItems)

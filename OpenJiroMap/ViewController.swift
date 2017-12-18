@@ -22,7 +22,7 @@ class ViewController: UIViewController, GMSMapViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         mapView.clear()
         
-        let store = DataStore()
+        let store = DataStore.shared
         store.fetchItems { items in
             for item in items {
                 let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: CLLocationDegrees(item.latlng.latitude), longitude: CLLocationDegrees(item.latlng.longitude)))

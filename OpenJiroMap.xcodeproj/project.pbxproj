@@ -10,6 +10,7 @@
 		377C2741B78F730C6D63B85E /* Pods_OpenJiroMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3C946D6E2174E51E2844CD /* Pods_OpenJiroMapTests.framework */; };
 		3A0D9CF61FE7EF7A00277DFC /* JiroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D9CF51FE7EF7A00277DFC /* JiroCollectionViewCell.xib */; };
 		3A0D9CF81FE7EFDC00277DFC /* JiroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D9CF71FE7EFDC00277DFC /* JiroCollectionViewCell.swift */; };
+		3A0D9CFA1FE7F06E00277DFC /* JiroCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D9CF91FE7F06E00277DFC /* JiroCollectionViewController.swift */; };
 		3ABA77C41FDFF81300D8C3ED /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABA77C31FDFF81300D8C3ED /* SearchViewController.swift */; };
 		3ABA77C61FE0167000D8C3ED /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABA77C51FE0167000D8C3ED /* DataStore.swift */; };
 		3ACAD87D1FE6579D00BB649D /* FilteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACAD87C1FE6579D00BB649D /* FilteringViewController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		3A0D9CF51FE7EF7A00277DFC /* JiroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JiroCollectionViewCell.xib; sourceTree = "<group>"; };
 		3A0D9CF71FE7EFDC00277DFC /* JiroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiroCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A0D9CF91FE7F06E00277DFC /* JiroCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiroCollectionViewController.swift; sourceTree = "<group>"; };
 		3ABA77C31FDFF81300D8C3ED /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3ABA77C51FE0167000D8C3ED /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		3ACAD87C1FE6579D00BB649D /* FilteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				3ABA77C31FDFF81300D8C3ED /* SearchViewController.swift */,
 				3ABA77C51FE0167000D8C3ED /* DataStore.swift */,
 				3ACAD87C1FE6579D00BB649D /* FilteringViewController.swift */,
+				3A0D9CF91FE7F06E00277DFC /* JiroCollectionViewController.swift */,
 				3A0D9CF71FE7EFDC00277DFC /* JiroCollectionViewCell.swift */,
 				3A0D9CF51FE7EF7A00277DFC /* JiroCollectionViewCell.xib */,
 				3ACCC0C21FC67EB900300A7E /* Main.storyboard */,
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0D9CFA1FE7F06E00277DFC /* JiroCollectionViewController.swift in Sources */,
 				3A0D9CF81FE7EFDC00277DFC /* JiroCollectionViewCell.swift in Sources */,
 				3ABA77C41FDFF81300D8C3ED /* SearchViewController.swift in Sources */,
 				3ABA77C61FE0167000D8C3ED /* DataStore.swift in Sources */,

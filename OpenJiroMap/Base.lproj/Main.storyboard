@@ -131,7 +131,7 @@
         <!--リスト-->
         <scene sceneID="R2W-zA-Xgw">
             <objects>
-                <collectionViewController id="KMT-cq-FST" sceneMemberID="viewController">
+                <collectionViewController id="KMT-cq-FST" customClass="JiroCollectionViewController" customModule="OpenJiroMap" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DO2-dS-sAO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,7 +149,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="リスト" id="qxg-9G-neW">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="ksw-xV-k6R"/>
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="ksw-xV-k6R">
+                            <connections>
+                                <action selector="didTouchUpCloseButton:" destination="KMT-cq-FST" id="a9h-vd-iva"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zq9-MZ-64T" userLabel="First Responder" sceneMemberID="firstResponder"/>
