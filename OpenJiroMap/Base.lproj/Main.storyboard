@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -143,77 +142,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wYl-g5-XTp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="営業中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umt-cb-VDn">
-                                            <rect key="frame" x="10" y="50" width="37" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="37" id="nxU-pU-wBH"/>
-                                                <constraint firstAttribute="height" constant="21" id="syW-6d-g2i"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00～14:00／18:00～21:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-K1-kyf">
-                                            <rect key="frame" x="55" y="50" width="163" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="16u-G5-W6f"/>
-                                                <constraint firstAttribute="width" constant="163" id="TrX-WI-XmM"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〒944-0008 新潟県妙高市柳井田町4-11-16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41F-Pt-krf">
-                                            <rect key="frame" x="8" y="30" width="287" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="vb3-5j-O3p"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dEW-Zl-Eke">
-                                            <rect key="frame" x="295" y="8" width="72" height="68"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="72" id="9nT-Us-Mcj"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラーメン二郎 三田本店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-Ud-iGw">
-                                            <rect key="frame" x="8" y="8" width="287" height="22"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="22" id="WwJ-Y6-6Xp"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="dEW-Zl-Eke" secondAttribute="bottom" id="1Z6-W8-Us9"/>
-                                    <constraint firstItem="41F-Pt-krf" firstAttribute="leading" secondItem="wYl-g5-XTp" secondAttribute="leadingMargin" id="7Hn-zK-nTA"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="v7I-K1-kyf" secondAttribute="bottom" constant="5" id="SRd-GL-zam"/>
-                                    <constraint firstItem="41F-Pt-krf" firstAttribute="top" secondItem="0eG-Ud-iGw" secondAttribute="bottom" id="mkX-qC-5WN"/>
-                                    <constraint firstItem="dEW-Zl-Eke" firstAttribute="top" secondItem="wYl-g5-XTp" secondAttribute="topMargin" id="nf0-R3-4mR"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="umt-cb-VDn" secondAttribute="bottom" constant="5" id="obM-Bx-FSs"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="dEW-Zl-Eke" secondAttribute="trailing" id="pjx-En-EZP"/>
-                                    <constraint firstItem="0eG-Ud-iGw" firstAttribute="top" secondItem="wYl-g5-XTp" secondAttribute="topMargin" id="qmA-Gh-2ge"/>
-                                    <constraint firstItem="umt-cb-VDn" firstAttribute="leading" secondItem="wYl-g5-XTp" secondAttribute="leadingMargin" constant="2" id="rgk-TA-JXI"/>
-                                    <constraint firstItem="dEW-Zl-Eke" firstAttribute="leading" secondItem="41F-Pt-krf" secondAttribute="trailing" id="vVh-AK-2lQ"/>
-                                    <constraint firstItem="v7I-K1-kyf" firstAttribute="leading" secondItem="umt-cb-VDn" secondAttribute="trailing" constant="8" id="xOG-9D-MQe"/>
-                                    <constraint firstItem="dEW-Zl-Eke" firstAttribute="leading" secondItem="0eG-Ud-iGw" secondAttribute="trailing" id="xmf-Mr-U5d"/>
-                                    <constraint firstItem="0eG-Ud-iGw" firstAttribute="leading" secondItem="wYl-g5-XTp" secondAttribute="leadingMargin" id="zHm-FE-rWu"/>
-                                </constraints>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="KMT-cq-FST" id="jx4-5N-QKg"/>
                             <outlet property="delegate" destination="KMT-cq-FST" id="4of-qO-aqx"/>

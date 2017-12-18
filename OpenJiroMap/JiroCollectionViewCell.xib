@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="JiroCollectionViewCell" id="fp7-0E-xlr" customClass="JiroCollectionViewCell" customModule="OpenJiroMap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="営業中" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNg-v6-q85">
+                        <rect key="frame" x="18" y="58" width="37" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="O0g-q5-O9u"/>
+                            <constraint firstAttribute="width" constant="37" id="e7j-Yz-cXq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00～14:00／18:00～21:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE4-v7-hRC">
+                        <rect key="frame" x="63" y="58" width="163" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="163" id="GL5-lr-XxM"/>
+                            <constraint firstAttribute="height" constant="21" id="GgQ-32-99f"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〒944-0008 新潟県妙高市柳井田町4-11-16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrS-tE-e4U">
+                        <rect key="frame" x="16" y="22" width="271" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="6Va-Y5-tAM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-aj-Qmu">
+                        <rect key="frame" x="287" y="0.0" width="72" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="72" id="k61-pW-cc3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラーメン二郎 三田本店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYV-XH-Iqk">
+                        <rect key="frame" x="16" y="0.0" width="271" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="k7B-Lu-SqF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="cNg-v6-q85" firstAttribute="leading" secondItem="fp7-0E-xlr" secondAttribute="leadingMargin" constant="2" id="8jC-Sb-Rs4"/>
+                <constraint firstItem="OYV-XH-Iqk" firstAttribute="leading" secondItem="fp7-0E-xlr" secondAttribute="leadingMargin" id="CIF-lb-AtZ"/>
+                <constraint firstItem="GL3-aj-Qmu" firstAttribute="leading" secondItem="OrS-tE-e4U" secondAttribute="trailing" id="JxC-PH-vNH"/>
+                <constraint firstAttribute="bottomMargin" secondItem="cNg-v6-q85" secondAttribute="bottom" constant="5" id="OWk-MF-E70"/>
+                <constraint firstAttribute="bottomMargin" secondItem="GL3-aj-Qmu" secondAttribute="bottom" id="SKo-2Q-Tb1"/>
+                <constraint firstItem="OYV-XH-Iqk" firstAttribute="top" secondItem="fp7-0E-xlr" secondAttribute="topMargin" id="a77-F3-578"/>
+                <constraint firstItem="OrS-tE-e4U" firstAttribute="top" secondItem="OYV-XH-Iqk" secondAttribute="bottom" id="aOj-D1-ySE"/>
+                <constraint firstItem="OrS-tE-e4U" firstAttribute="leading" secondItem="fp7-0E-xlr" secondAttribute="leadingMargin" id="c7V-i1-oqM"/>
+                <constraint firstItem="GL3-aj-Qmu" firstAttribute="leading" secondItem="OYV-XH-Iqk" secondAttribute="trailing" id="cLs-uT-wfK"/>
+                <constraint firstItem="aE4-v7-hRC" firstAttribute="leading" secondItem="cNg-v6-q85" secondAttribute="trailing" constant="8" id="fvR-9w-RP2"/>
+                <constraint firstAttribute="trailingMargin" secondItem="GL3-aj-Qmu" secondAttribute="trailing" id="jUt-bj-dfl"/>
+                <constraint firstAttribute="bottomMargin" secondItem="aE4-v7-hRC" secondAttribute="bottom" constant="5" id="pHf-aV-Ygm"/>
+                <constraint firstItem="GL3-aj-Qmu" firstAttribute="top" secondItem="fp7-0E-xlr" secondAttribute="topMargin" id="t5E-3R-YWd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VxN-1V-HCg"/>
+            <connections>
+                <outlet property="adressLabel" destination="OrS-tE-e4U" id="iB8-YX-LFe"/>
+                <outlet property="nameLabel" destination="OYV-XH-Iqk" id="Hg5-Kd-NFa"/>
+                <outlet property="openLabel" destination="cNg-v6-q85" id="mf3-Qw-VXj"/>
+                <outlet property="openTimeLabel" destination="aE4-v7-hRC" id="sCD-e2-au4"/>
+                <outlet property="thumbnail" destination="GL3-aj-Qmu" id="7Qw-F1-kne"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
