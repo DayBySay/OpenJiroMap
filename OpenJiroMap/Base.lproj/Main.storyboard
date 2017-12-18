@@ -13,15 +13,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="5xB-V0-2N4">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="52l-kd-S13"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="Zo3-dp-GJq"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="v0N-vx-xyc"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="yXX-xp-bq3"/>
-                    </connections>
-                </searchDisplayController>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenJiroMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -54,6 +45,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="リストを表示"/>
+                                        <connections>
+                                            <segue destination="vaM-sv-S0S" kind="show" id="tSq-li-t4R"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,20 +78,29 @@
                         <outlet property="searchDisplayController" destination="5xB-V0-2N4" id="Qsj-bk-UvC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="5xB-V0-2N4">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="52l-kd-S13"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="Zo3-dp-GJq"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="v0N-vx-xyc"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="yXX-xp-bq3"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-442.39999999999998" y="359.37031484257875"/>
         </scene>
-        <!--Filtering View Controller-->
+        <!--フィルタ-->
         <scene sceneID="W4e-1v-XFY">
             <objects>
-                <viewController id="CIY-an-Ubg" customClass="FilteringViewController" customModule="OpenJiroMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="フィルタ" id="CIY-an-Ubg" customClass="FilteringViewController" customModule="OpenJiroMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MQR-Be-zlw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="pHS-Oz-3eD"/>
                     </view>
-                    <navigationItem key="navigationItem" id="a6Q-KC-13n">
+                    <navigationItem key="navigationItem" title="フィルタ" id="a6Q-KC-13n">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="4z0-DZ-G15">
                             <connections>
                                 <action selector="DidTouchUpDoneButton:" destination="CIY-an-Ubg" id="lL4-rA-dkY"/>
@@ -108,6 +111,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cu9-V8-eo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1092" y="359"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9ty-yW-hLl">
+            <objects>
+                <navigationController id="vaM-sv-S0S" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T0l-8X-bAo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KMT-cq-FST" kind="relationship" relationship="rootViewController" id="7Yd-AZ-TJ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQd-97-Rf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="1100"/>
+        </scene>
+        <!--リスト-->
+        <scene sceneID="R2W-zA-Xgw">
+            <objects>
+                <collectionViewController id="KMT-cq-FST" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DO2-dS-sAO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1La-O6-7io">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wYl-g5-XTp">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="KMT-cq-FST" id="jx4-5N-QKg"/>
+                            <outlet property="delegate" destination="KMT-cq-FST" id="4of-qO-aqx"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="リスト" id="qxg-9G-neW">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ksw-xV-k6R"/>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zq9-MZ-64T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="1100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9MI-LW-hFU">
